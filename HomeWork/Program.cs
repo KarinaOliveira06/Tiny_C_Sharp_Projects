@@ -12,7 +12,7 @@ namespace HomeWork
             Console.WriteLine("Digite sua idade: ");
             string idade = Console.ReadLine();
 
-            string saudacoes = $"Olá {nome}, sua idade é de {idade} anos";
+            string saudacoes = $"Olá {nome}, sua idade é de {idade} anos.";
             Console.WriteLine(saudacoes);
         }
     }
