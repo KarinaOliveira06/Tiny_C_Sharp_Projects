@@ -3,7 +3,7 @@ using System;
 
 namespace HomeWork
 {
-    class Disctionary
+    class Dictionary
     {
         static void Main()
         {
