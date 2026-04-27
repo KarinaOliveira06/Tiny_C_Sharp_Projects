@@ -1,3 +1,4 @@
+using System;
 using System.Text.Json;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
@@ -11,12 +12,12 @@ namespace WorldBank
         public int AccountNumber {get;  set;}
         public decimal Balance {get;  set;}
         
-        public void deposit(decimal amount)
+        public void Deposit(decimal amount)
         {
             Balance += amount;
         }
 
-        public bool withdraw(decimal amount)
+        public bool Withdraw(decimal amount)
         {
             if (Balance >= amount)
             {
