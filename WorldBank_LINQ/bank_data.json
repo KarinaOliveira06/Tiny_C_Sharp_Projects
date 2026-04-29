@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "World",
+    "Password": "Bank",
+    "AccountNumber": 1,
+    "Balance": 0,
+    "SavingsBalance": 0
+  },
+  {
+    "Name": "1",
+    "Password": "1",
+    "AccountNumber": 1,
+    "Balance": 0,
+    "SavingsBalance": 300
+  }
+]

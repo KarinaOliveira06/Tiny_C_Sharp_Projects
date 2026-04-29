@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace WorldBankUpgraded
+namespace WorldBank_LINQ
 {
     class Program
     {
@@ -195,6 +195,8 @@ namespace WorldBankUpgraded
                     if (typedCode == "MASTER" && typedPassword == "MASTER123")
                     {
                         Console.Clear();
+
+                        loggedAccount.DisplayRole();
 
                         Admin masterAdmin = new Admin();
                         masterAdmin.Name = "Master Admin";
