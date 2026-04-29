@@ -41,6 +41,7 @@ namespace WorldBankUpgraded
                     newClientAccount.Password = typedPassword;
                     newClientAccount.AccountNumber = typedNumber;
                     newClientAccount.Balance = 0;
+                    newClientAccount.SavingsBalance = 0;
 
                     myBank.AddNewAccount(newClientAccount);
                     myBank.SaveData();
@@ -62,7 +63,6 @@ namespace WorldBankUpgraded
                     Account loggedAccount = myBank.FindAccount(loginNumber, loginPassword);
 
                     if (loggedAccount != null)
-
                     {
                         Console.WriteLine($"Login successful, welcome back {loggedAccount.Name}!");
                         Console.ReadLine();
@@ -85,8 +85,8 @@ namespace WorldBankUpgraded
 
                             if (loggedOption == "1")
                             {
-                                Console.WriteLine($"This is your balance: {loggedAccount.Balance}");
-                                Console.WriteLine($"Vault Balance: {loggedAccount.SavingsBalance:C}");
+                                Console.WriteLine($"This is your Main balance: {loggedAccount.Balance:C}");
+                                Console.WriteLine($"This is your Vault balance: {loggedAccount.SavingsBalance:C}");
 
                                 Console.WriteLine("Press Enter to return to the menu.");
                                 Console.ReadLine();
@@ -100,7 +100,7 @@ namespace WorldBankUpgraded
                                 loggedAccount.Deposit(depositAmount);
                                 myBank.SaveData();
 
-                                Console.WriteLine($"Deposit sucessful! Your new balance is {loggedAccount.Balance}");
+                                Console.WriteLine($"Deposit sucessful! Your new balance is {loggedAccount.Balance:C}");
                                 Console.ReadLine();
                                 Console.Clear();
                             }
@@ -111,19 +111,17 @@ namespace WorldBankUpgraded
 
                                 bool isSuccess = loggedAccount.Withdraw(withdrawAmount);
 
-                                if (isSuccess == true)
+                                if (isSuccess)
                                 {
                                     myBank.SaveData();
-                                    Console.WriteLine($"Successful! Now your balance is {loggedAccount.Balance}, press enter to exit.");
-                                    Console.ReadLine();
-                                    Console.Clear();
+                                    Console.WriteLine($"Successful! Now your balance is {loggedAccount.Balance:C}");
                                 }
                                 else
                                 {
                                     Console.WriteLine("Transaction failed, insuficcient funds.");
-                                    Console.ReadLine();
-                                    Console.Clear();
                                 }
+                                Console.ReadLine();
+                                Console.Clear();
                             }
                             else if (loggedOption == "4")
                             {
@@ -133,8 +131,8 @@ namespace WorldBankUpgraded
                                 if (loggedAccount.GuardInSavings(depositAmount))
                                 {
                                     myBank.SaveData();
-                                    Console.WriteLine($"Successfully moved {depositAmount} to your Vault!");
-                                    Console.WriteLine($"Deposit sucessful! Your new balance is {loggedAccount.Balance}");
+                                    Console.WriteLine($"Successfully moved {depositAmount:C} to your Vault!");
+                                    Console.WriteLine($"Your new main balance is {loggedAccount.Balance:C}");
                                 }
                                 else
                                 {
@@ -151,7 +149,7 @@ namespace WorldBankUpgraded
                                 if (loggedAccount.GetFromSavings(amount))
                                 {
                                     myBank.SaveData();
-                                    Console.WriteLine($"Sucessfully retrieved {amount} to your main Balance!");
+                                    Console.WriteLine($"Sucessfully retrieved {amount:C} to your main Balance!");
                                 }
                                 else
                                 {
@@ -159,7 +157,6 @@ namespace WorldBankUpgraded
                                 }
                                 Console.ReadLine();
                                 Console.Clear();
-
                             }
                             else if (loggedOption == "6")
                             {
@@ -168,11 +165,57 @@ namespace WorldBankUpgraded
                                 Console.ReadLine();
                                 Console.Clear();
                             }
+                            else
+                            {
+                                Console.WriteLine("Invalid option. Press Enter to try again.");
+                                Console.ReadLine();
+                                Console.Clear();
+                            }
                         }
                     }
                     else
                     {
                         Console.WriteLine("Invalid account number or password! Press Enter to try again.");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+                }
+                else if (Option == "0") 
+                {
+                    Console.WriteLine("=== ADMIN control panel ===");
+                    Console.Write("Type the Master code: ");
+                    string typedCode = Console.ReadLine();
+
+                    Console.Write("Type the Master password: ");
+                    string typedPassword = Console.ReadLine();
+
+                    if (typedCode == "MASTER" && typedPassword == "MASTER123")
+                    {
+                        Console.Clear();
+
+                        Admin masterAdmin = new Admin();
+                        masterAdmin.Name = "Master Admin";
+                        masterAdmin.Password = typedPassword;
+                        masterAdmin.EmployeeCode = typedCode;
+
+                        masterAdmin.GreetAdmin();
+
+                        Console.WriteLine("\n[1] View all registered accounts");
+                        Console.WriteLine("[2] Exit Admin Panel");
+                        string adminOpt = Console.ReadLine();
+
+                        if (adminOpt == "1")
+                        {
+                            Console.WriteLine($"The bank currently has {myBank.accountsList.Count} accounts.");
+                        }
+                        
+                        Console.WriteLine("\nExiting Admin Panel...");
+                        Console.ReadLine();
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        Console.WriteLine("ACCESS DENIED.");
                         Console.ReadLine();
                         Console.Clear();
                     }
@@ -187,7 +230,7 @@ namespace WorldBankUpgraded
                 }
                 else
                 {
-                    Console.Write("Something went wrong. Please, try again.");
+                    Console.WriteLine("Something went wrong. Please, try again.");
                     Console.ReadLine();
                     Console.Clear();
                 }

@@ -11,6 +11,11 @@ namespace WorldBankUpgraded
         public decimal Balance { get; set; }
         public decimal SavingsBalance { get; set; }
 
+        public override void DisplayRole()
+        {
+        Console.WriteLine($"[CLIENT BADGE] Name: {Name} | Account Number: {AccountNumber}");
+        }
+
         public void Deposit(decimal amount)
         {
             Balance += amount;
