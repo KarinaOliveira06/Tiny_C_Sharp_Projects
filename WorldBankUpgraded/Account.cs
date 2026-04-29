@@ -5,10 +5,8 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace WorldBankUpgraded
 {
-    class Account
+    class Account : User
     {
-        public string Name { get; set; }
-        public string Password { get; set; }
         public int AccountNumber { get; set; }
         public decimal Balance { get; set; }
         public decimal SavingsBalance { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBank\\WorldBank.csproj": {}
+    "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBankUpgraded\\WorldBank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBank\\WorldBank.csproj": {
+    "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBankUpgraded\\WorldBank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBank\\WorldBank.csproj",
+        "projectUniqueName": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBankUpgraded\\WorldBank.csproj",
         "projectName": "WorldBank",
-        "projectPath": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBank\\WorldBank.csproj",
+        "projectPath": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBankUpgraded\\WorldBank.csproj",
         "packagesPath": "C:\\Users\\Karina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBank\\obj\\",
+        "outputPath": "C:\\Users\\Karina\\Downloads\\Tiny_C#_Projects\\WorldBankUpgraded\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

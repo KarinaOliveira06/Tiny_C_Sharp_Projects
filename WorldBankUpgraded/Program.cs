@@ -76,7 +76,9 @@ namespace WorldBankUpgraded
                             Console.WriteLine("[1] Check balance");
                             Console.WriteLine("[2] Deposit");
                             Console.WriteLine("[3] Withdraw");
-                            Console.WriteLine("[4] Logout");
+                            Console.WriteLine("[4] Move money to vault");
+                            Console.WriteLine("[5] Get money from vault");
+                            Console.WriteLine("[6] Logout");
                             Console.WriteLine("Choose an option:");
 
                             string loggedOption = Console.ReadLine();
@@ -84,6 +86,7 @@ namespace WorldBankUpgraded
                             if (loggedOption == "1")
                             {
                                 Console.WriteLine($"This is your balance: {loggedAccount.Balance}");
+                                Console.WriteLine($"Vault Balance: {loggedAccount.SavingsBalance:C}");
 
                                 Console.WriteLine("Press Enter to return to the menu.");
                                 Console.ReadLine();
@@ -123,6 +126,42 @@ namespace WorldBankUpgraded
                                 }
                             }
                             else if (loggedOption == "4")
+                            {
+                                Console.WriteLine($"Please, enter the amount to be deposited in your vault: ");
+                                decimal depositAmount = decimal.Parse(Console.ReadLine());
+
+                                if (loggedAccount.GuardInSavings(depositAmount))
+                                {
+                                    myBank.SaveData();
+                                    Console.WriteLine($"Successfully moved {depositAmount} to your Vault!");
+                                    Console.WriteLine($"Deposit sucessful! Your new balance is {loggedAccount.Balance}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Sorry, insufficient funds, please, try again.");
+                                }
+                                Console.ReadLine();
+                                Console.Clear();
+                            }
+                            else if (loggedOption == "5")
+                            {
+                                Console.WriteLine("How much money do you want to retrieve from your Vault?");
+                                decimal amount = decimal.Parse(Console.ReadLine());
+
+                                if (loggedAccount.GetFromSavings(amount))
+                                {
+                                    myBank.SaveData();
+                                    Console.WriteLine($"Sucessfully retrieved {amount} to your main Balance!");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Insufficcient funds in Vault.");
+                                }
+                                Console.ReadLine();
+                                Console.Clear();
+
+                            }
+                            else if (loggedOption == "6")
                             {
                                 isLoggedIn = false;
                                 Console.WriteLine("Your account has been logged out.");
