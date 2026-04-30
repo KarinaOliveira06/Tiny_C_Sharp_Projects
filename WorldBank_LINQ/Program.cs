@@ -225,6 +225,20 @@ namespace WorldBank_LINQ
                             decimal totalMoney = myBank.accountsList.Sum(acc => acc.Balance + acc.SavingsBalance);
                             Console.WriteLine($"Total money secured in WorldBank: {totalMoney:C}");
                         }
+                        else if (adminOpt == "3")
+                        {
+                            var emptyAccounts = myBank.accountsList
+                                                .Where(acc => acc.Balance == 0 && acc.SavingsBalance == 0)
+                                                .ToList();
+                            Console.WriteLine($"\nFound {emptyAccounts.Count} accounts with absolutely no money:");
+                            Console.Read();
+                            foreach (var acc in emptyAccounts)
+                            {
+                                Console.WriteLine($"- Client: {acc.Name} | Account Number: {acc.AccountNumber}");
+                            }
+                            Console.Read();
+                            Console.Clear();
+                        }
                         else if (adminOpt == "4")
                         {
                             Console.WriteLine("\nExiting Admin Panel...");
