@@ -7,9 +7,9 @@ My goal is to build a series of small projects to master the following concepts:
 - [x] **Hello World:** Setting up the environment and first output.
 - [x] **Variable Types & Logic:** Exploring C# syntax and basic operators.
 - [x] **Control Flow:** Building decision-making logic (If/Else, Switch).
-- [ ] **Object-Oriented Programming (OOP):** Classes, Inheritance, and Polymorphism.
-- [ ] **File Management:** Porting my Python persistence logic to C#.
-- [ ] **LINQ:** Learning how to query data efficiently in .NET.
+- [x] **Object-Oriented Programming (OOP):** Classes, Inheritance, and Polymorphism.
+- [x] **File Management:** Porting my Python persistence logic to C#.
+- [x] **LINQ:** Learning how to query data efficiently in .NET.
 
 ## 🛠️ Tech Stack
 - Language: C#
