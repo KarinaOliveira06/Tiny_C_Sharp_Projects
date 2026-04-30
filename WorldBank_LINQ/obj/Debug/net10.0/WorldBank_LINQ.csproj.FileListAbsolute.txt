@@ -1,0 +1,15 @@
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\bin\Debug\net10.0\WorldBank_LINQ.exe
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\bin\Debug\net10.0\WorldBank_LINQ.deps.json
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\bin\Debug\net10.0\WorldBank_LINQ.runtimeconfig.json
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\bin\Debug\net10.0\WorldBank_LINQ.dll
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\bin\Debug\net10.0\WorldBank_LINQ.pdb
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.AssemblyInfoInputs.cache
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.AssemblyInfo.cs
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.csproj.CoreCompileInputs.cache
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.sourcelink.json
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.dll
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\refint\WorldBank_LINQ.dll
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.pdb
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\WorldBank_LINQ.genruntimeconfig.cache
+C:\Users\Karina\Downloads\Tiny_C#_Projects\WorldBank_LINQ\obj\Debug\net10.0\ref\WorldBank_LINQ.dll

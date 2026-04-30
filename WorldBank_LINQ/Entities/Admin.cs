@@ -1,4 +1,4 @@
-namespace WorldBank_LINQ
+namespace WorldBank_LINQ.Entities
 {
     class Admin : User
     {

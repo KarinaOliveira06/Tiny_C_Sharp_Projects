@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-using WorldBank_LINQ.Models;
+using System.Linq;
+using WorldBank_LINQ.Entities;
 using WorldBank_LINQ.Services;
+
 
 namespace WorldBank_LINQ
 {
@@ -185,7 +187,7 @@ namespace WorldBank_LINQ
                         Console.Clear();
                     }
                 }
-                else if (Option == "0") 
+                else if (Option == "0")
                 {
                     Console.WriteLine("=== ADMIN control panel ===");
                     Console.Write("Type the Master code: ");
@@ -198,27 +200,37 @@ namespace WorldBank_LINQ
                     {
                         Console.Clear();
 
-                        loggedAccount.DisplayRole();
-
                         Admin masterAdmin = new Admin();
                         masterAdmin.Name = "Master Admin";
                         masterAdmin.Password = typedPassword;
                         masterAdmin.EmployeeCode = typedCode;
 
+                        masterAdmin.DisplayRole();
                         masterAdmin.GreetAdmin();
 
                         Console.WriteLine("\n[1] View all registered accounts");
-                        Console.WriteLine("[2] Exit Admin Panel");
+                        Console.WriteLine("[2] View all money stored in the Bank.");
+                        Console.WriteLine("[3] Exit Admin Panel");
                         string adminOpt = Console.ReadLine();
 
                         if (adminOpt == "1")
                         {
                             Console.WriteLine($"The bank currently has {myBank.accountsList.Count} accounts.");
+                            Console.Read();
+                            Console.Clear();
                         }
-                        
-                        Console.WriteLine("\nExiting Admin Panel...");
-                        Console.ReadLine();
-                        Console.Clear();
+                        else if (adminOpt == "2")
+                        {
+                            decimal totalMoney = myBank.accountsList.Sum(acc => acc.Balance + acc.SavingsBalance);
+                            Console.WriteLine($"Total money secured in WorldBank: {totalMoney:C}");
+                        }
+                        else if (adminOpt == "3")
+                        {
+                            Console.WriteLine("\nExiting Admin Panel...");
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+
                     }
                     else
                     {

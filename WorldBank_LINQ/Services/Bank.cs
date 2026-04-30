@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Security.Principal;
 using System.Text.Json;
 using System.IO;
-using WorldBank_LINQ.Models;
+using WorldBank_LINQ.Entities;
 
-namespace WorldBank_LINQ
+namespace WorldBank_LINQ.Services
 {
     class Bank
     {
-        private List<Account> accountsList = new List<Account>();
+        public List<Account> accountsList = new List<Account>();
 
         public void AddNewAccount(Account newAccount)
         {

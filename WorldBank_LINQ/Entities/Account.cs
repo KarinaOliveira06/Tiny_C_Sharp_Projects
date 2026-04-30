@@ -3,7 +3,7 @@ using System.Text.Json;
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 
-namespace WorldBank_LINQ
+namespace WorldBank_LINQ.Entities
 {
     class Account : User
     {
