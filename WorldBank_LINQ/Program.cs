@@ -209,8 +209,9 @@ namespace WorldBank_LINQ
                         masterAdmin.GreetAdmin();
 
                         Console.WriteLine("\n[1] View all registered accounts");
-                        Console.WriteLine("[2] View all money stored in the Bank.");
-                        Console.WriteLine("[3] Exit Admin Panel");
+                        Console.WriteLine("[2] View all money stored in the Bank");
+                        Console.WriteLine("[3] Find empty accounts");
+                        Console.WriteLine("[4] Exit Admin Panel");
                         string adminOpt = Console.ReadLine();
 
                         if (adminOpt == "1")
@@ -224,7 +225,7 @@ namespace WorldBank_LINQ
                             decimal totalMoney = myBank.accountsList.Sum(acc => acc.Balance + acc.SavingsBalance);
                             Console.WriteLine($"Total money secured in WorldBank: {totalMoney:C}");
                         }
-                        else if (adminOpt == "3")
+                        else if (adminOpt == "4")
                         {
                             Console.WriteLine("\nExiting Admin Panel...");
                             Console.ReadLine();

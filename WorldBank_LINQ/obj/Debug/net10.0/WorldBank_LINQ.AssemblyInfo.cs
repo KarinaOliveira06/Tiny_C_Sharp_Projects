@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldBank_LINQ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54544c60af1e6e69adf5ee5703455993add68e37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e573715af5cbcaa7d6122fdf682f0286fda0cac2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldBank_LINQ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldBank_LINQ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
